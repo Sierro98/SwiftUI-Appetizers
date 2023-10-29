@@ -9,15 +9,28 @@ import SwiftUI
 
 struct AppetizerListView: View {
     
-    @State var Appetizers = MockData.sampleAppetizers
+    @State var appetizers: [Appetizer] = []
     
     var body: some View {
         NavigationView {
-            List($Appetizers) { appetizer in
+            List($appetizers) { appetizer in
                 AppetizerItemList(appetizer: appetizer)
             }
             .listStyle(.plain)
             .navigationTitle("Appetizers")
+        }
+    }
+    
+    func getAppetizers() {
+        NetworkManager.shared.getAppetizers { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let appetizers):
+                    self.appetizers = appetizers
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
         }
     }
 }
