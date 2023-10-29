@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct AppetizerListView: View {
+    
+    @State var Appetizers = MockData.sampleAppetizers
+    
     var body: some View {
         NavigationView {
-            Text("Appetizer List")
-                .navigationTitle("🍟 Appetizers")
+            List($Appetizers) { appetizer in
+                AppetizerItemList(appetizer: appetizer)
+            }
+            .listStyle(.plain)
+            .navigationTitle("Appetizers")
         }
     }
 }
