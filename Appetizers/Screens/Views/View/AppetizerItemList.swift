@@ -13,7 +13,7 @@ struct AppetizerItemList: View {
     
     var body: some View {
         HStack {
-            Image("asianFlankSteak")
+            Image(appetizer.imageURL)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150, height: 120)
