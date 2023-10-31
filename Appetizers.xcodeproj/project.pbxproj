@@ -19,6 +19,7 @@
 		AEB251332AEE63C80009260E /* AppetizerItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB251322AEE63C80009260E /* AppetizerItemList.swift */; };
 		AEB251362AEE74B60009260E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB251352AEE74B60009260E /* NetworkManager.swift */; };
 		AEB251382AEE7BFA0009260E /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB251372AEE7BFA0009260E /* APError.swift */; };
+		AED242A12AF15239003EE4C0 /* AppetizerSkeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED242A02AF15239003EE4C0 /* AppetizerSkeleton.swift */; };
 		AED4F6DE2AF0132C00C04365 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED4F6DD2AF0132C00C04365 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		AEB251322AEE63C80009260E /* AppetizerItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerItemList.swift; sourceTree = "<group>"; };
 		AEB251352AEE74B60009260E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AEB251372AEE7BFA0009260E /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
+		AED242A02AF15239003EE4C0 /* AppetizerSkeleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppetizerSkeleton.swift; sourceTree = "<group>"; };
 		AED4F6DD2AF0132C00C04365 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				AEB251322AEE63C80009260E /* AppetizerItemList.swift */,
+				AED242A02AF15239003EE4C0 /* AppetizerSkeleton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				AE5B774C2AEBCDA60061DEC4 /* OrderView.swift in Sources */,
 				AEB251332AEE63C80009260E /* AppetizerItemList.swift in Sources */,
 				AEB251362AEE74B60009260E /* NetworkManager.swift in Sources */,
+				AED242A12AF15239003EE4C0 /* AppetizerSkeleton.swift in Sources */,
 				AE5B77372AEBCB810061DEC4 /* AppetizersApp.swift in Sources */,
 				AED4F6DE2AF0132C00C04365 /* Alert.swift in Sources */,
 				AE5B77482AEBCD320061DEC4 /* AppetizerListView.swift in Sources */,

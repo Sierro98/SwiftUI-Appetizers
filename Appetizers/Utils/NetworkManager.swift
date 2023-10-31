@@ -5,11 +5,12 @@
 //  Created by Alejandro Sierro Galán on 29/10/23.
 //
 
-import Foundation
+import UIKit
 
 final class NetworkManager {
     
     static let shared = NetworkManager()
+    private let cache = NSCache<NSString, UIImage>()
     
     static let baseURL = "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
     private let appetizersURL = baseURL + "appetizers"
@@ -46,5 +47,17 @@ final class NetworkManager {
         }
         
         task.resume()
+    }
+    
+    func getAppetizerImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
+        
+        let cacheKey = NSString(string: urlString)
+        
+        if let image = cache.object(forKey: cacheKey) {
+            completed(image)
+            return
+        }
+        
+       
     }
 }

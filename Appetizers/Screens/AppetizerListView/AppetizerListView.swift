@@ -13,11 +13,20 @@ struct AppetizerListView: View {
     
     var body: some View {
         NavigationView {
-            List($viewModel.appetizers) { appetizer in
-                AppetizerItemList(appetizer: appetizer)
-            }
-            .listStyle(.plain)
+            
+            ZStack {
+                if viewModel.isLoading {
+                    List(MockData.sampleAppetizers) { appetizer in
+                        AppetizerSkeleton()
+                    }
+                    .listStyle(.plain)
+                }
+                List($viewModel.appetizers) { appetizer in
+                    AppetizerItemList(appetizer: appetizer)
+                }
+                .listStyle(.plain)
             .navigationTitle("Appetizers")
+            }
         }
         .onAppear {
             viewModel.getAppetizers()
