@@ -24,7 +24,7 @@ struct AccountView: View {
                     DatePicker("Birthday", selection: $viewmodel.birthDay, displayedComponents: .date)
                         .foregroundStyle(.secondary)
                     
-                    Button(action: { }) {
+                    Button(action: { viewmodel.saveChanges() }) {
                         Text("Save Changes")
                             .foregroundStyle(.brandPrimary)
                     }
@@ -39,6 +39,11 @@ struct AccountView: View {
                 
             }
             .navigationTitle("Account")
+        }
+        .alert(item: $viewmodel.alertItem) { alertItem in
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
         }
     }
 }
