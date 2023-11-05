@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AppetizerItemList: View {
     
-    @Binding var appetizer: Appetizer
+    var appetizer: Appetizer
     
     var body: some View {
         HStack {
@@ -35,5 +35,5 @@ struct AppetizerItemList: View {
 }
 
 #Preview {
-    AppetizerItemList(appetizer: .constant(MockData.sampleAppetizer))
+    AppetizerItemList(appetizer: MockData.sampleAppetizer)
 }
