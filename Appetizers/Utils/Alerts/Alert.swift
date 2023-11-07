@@ -43,6 +43,17 @@ struct AlertContext {
                                        message: Text("The email has a wrong format, please check your email."),
                                        dismissButton: .default(Text("Ok")))
     
+    static let userSavedSucces = AlertItem(title: Text("Profile Saved"),
+                                       message: Text("The user has been saved succesfully."),
+                                       dismissButton: .default(Text("Ok")))
+    
+    static let userSavedError = AlertItem(title: Text("Error Saving User"),
+                                       message: Text("There has been an error saving the user profile."),
+                                       dismissButton: .default(Text("Ok")))
+    
+    static let userLoadError = AlertItem(title: Text("Error Loading User"),
+                                       message: Text("There has been an error while loading the user, please try again later."),
+                                       dismissButton: .default(Text("Ok")))
 }
 
 
